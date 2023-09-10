@@ -26,6 +26,15 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_
 svm_classifier = SVC(kernel='linear')
 svm_classifier.fit(x_train, y_train)
 
+# Feature importance of model
+f_importance = np.abs(svm_classifier.coef_[0])
+f_importancedf = pd.DataFrame({'Feature': x.columns, 'Importance': f_importance})
+f_importancedf = f_importancedf.sort_values(by='Importance', ascending=False)
+
+top_n_important_features = 10
+print(f'Top {top_n_important_features} features: ')
+print(f_importancedf.head(top_n_important_features))
+
 # Predictions from the model
 y_predict = svm_classifier.predict(x_test)
 
