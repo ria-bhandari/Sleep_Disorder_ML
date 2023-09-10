@@ -14,11 +14,10 @@ df = pd.read_csv('Sleep_health_and_lifestyle_dataset.csv')
 # Preprocessing of data - encoding categorical values
 df = pd.get_dummies(df, columns=['Gender', 'Occupation', 'Sleep Disorder'])
 
-# Spliting data - features and target variable
+# Spliting data - features and target variable - target variable in this case is Insomnia
 x = df.drop(['Person ID', 'BMI Category', 'Blood Pressure'], axis=1)
-#y = df['Sleep Disorder_Insomnia'] 
-y = df['Sleep Disorder_Sleep Apnea']
-#print(df.columns)
+y = df['Sleep Disorder_Insomnia']
+
 
 # Train test split of data
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
@@ -44,7 +43,36 @@ joblib.dump(svm_classifier, 'svm_model.pkl')
 model_for_prediction = joblib.load('svm_model.pkl')
 
 # Select a row for prediction (replace 1 with the index of the row you want to predict)
-prediction_row = x_test.iloc[1:2]  # This selects the second row from the test data
+prediction_row = x_test.iloc[0:12]  # This selects the second row from the test data
 predictions = model_for_prediction.predict(prediction_row)
 
-print(f'Predictions for the selected row in the dataset: {predictions}')
+print(f'Predictions of insomnia for the selected rows in the dataset: {predictions}')
+
+
+# Spliting data - features and target variable - target variable in this case is Insomnia
+x = df.drop(['Person ID', 'BMI Category', 'Blood Pressure'], axis=1)
+y = df['Sleep Disorder_Sleep Apnea']
+
+
+# Train test split of data
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
+
+# SVM
+svm_classifier = SVC(kernel='linear')
+svm_classifier.fit(x_train, y_train)
+
+# Predictions from the model
+y_predict = svm_classifier.predict(x_test)
+
+# Save the SVC model using joblib 
+joblib.dump(svm_classifier, 'svm_model_apnea.pkl')
+
+# Load the model to predict
+apnea_model_for_prediction = joblib.load('svm_model_apnea.pkl')
+
+# Select a row for prediction (replace 1 with the index of the row you want to predict)
+prediction_rows = x_test.iloc[0:12]  # This selects the second row from the test data
+apnea_predictions = apnea_model_for_prediction.predict(prediction_rows)
+
+print(f'Predictions of sleep apnea for the selected rows in the dataset: {apnea_predictions}')
+
