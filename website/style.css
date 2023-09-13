@@ -25,7 +25,7 @@ header{
 }
 
 .navlist a{ 
-    color: black; 
+    color: white; 
     margin-left: 100px; 
     font-size: 20px;
     font-weight: 300;
@@ -40,7 +40,34 @@ header{
 .logo { 
     font-weight: 400;
     font-size: 20px; 
-    
+    color: white; 
+}
+
+.dropdown {
+    display: block;
+}
+
+.content a {
+    padding:9px;
+    text-decoration: none;
+    color: #b31616;
+    display: block;
+    background-color: #2c2345;
+    margin: 0; 
+}
+
+.dropdown:hover .content {
+    display: block;
+}
+
+
+.content {
+    padding: 0; 
+    display: none;
+    position: absolute;
+    background-color: #292525;
+    z-index: 1;
+    box-shadow: 2px 2px 5px #000000;
 }
 
 .backdrop { 
@@ -52,8 +79,8 @@ header{
     color: white;
     overflow: hidden;
     background: #6648c0;  /* fallback for old browsers */
-    background: linear-gradient(rgba(6, 130, 64, 0.8), rgba(81, 120, 230, 0.8)), url("Images/B5.webp");  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(rgba(6, 130, 64, 0.8), rgba(81, 120, 230, 0.8)), url("Images/B5.webp"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(rgba(77, 72, 85, 0.8), rgba(0, 0, 0, 0.8)), url("Images/B5.webp");  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(rgba(77, 72, 85, 0.8), rgba(0, 0, 0, 0.8)), url("Images/B5.webp"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: contain; 
     background-repeat: no-repeat;
 
@@ -80,7 +107,7 @@ header{
     position: fixed;
     height: 1000px;
     width: 100%;
-    padding-top: 100px;
+    padding-top: 40px;
     color: white;
     overflow: hidden;
     background: #6648c0;  /* fallback for old browsers */
@@ -105,19 +132,34 @@ header{
     background-repeat: no-repeat;
 }
 
+.backdrop5{ 
+    z-index: 1; 
+    position: fixed;
+    height: 1000px;
+    width: 100%;
+    padding-top: 100px;
+    color: white;
+    overflow: hidden;
+    background: #6648c0;  /* fallback for old browsers */
+    background: linear-gradient(rgba(45, 52, 54, 0.8), rgba(211, 211, 211, 0.8)), url("Images/graphb.webp");  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(rgba(45, 52, 54, 0.8), rgba(211, 211, 211, 0.8)), url("Images/graphb.webp"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: contain; 
+    background-repeat: no-repeat;
+}
+
 
 
 .h1 { 
-    color: rgba(11, 67, 187, 0.552); 
-    font-size: 44px;
-    margin-top: 250px; 
-    margin-left: 100px;
+    color: white; 
+    font-size: 100px;
+    margin-top: 210px; 
+    text-align: center;
     font-weight: 00;
 }
 
 .h2 { 
-    color: rgba(11, 67, 187, 0.552); 
-    margin-left: 100px;
+    color: white;  
+    text-align: center;
 }
 
 .nh1 { 
@@ -128,6 +170,7 @@ header{
 
 .nh2{ 
     text-align: center;
+    font-weight: 300;
 }
 
 .ah1 { 
@@ -138,6 +181,8 @@ header{
 
 .ah2{ 
     text-align: center;
+    padding: 20px;
+    font-weight: 300;
 }
 .ih1 { 
     color: rgb(37, 74, 167); 
@@ -146,9 +191,126 @@ header{
 }
 
 .ih2{ 
+    padding: 20px;
     text-align: center;
+    font-weight: 300;
 }
 
+.SVCA {
+     margin-top: 20px;
+     display: block; 
+     margin-left: auto;
+     margin-right: auto;
+     max-width: 50%;
+     max-height: 50%;
+     padding: 2px; 
+}
 
+.SVCF { 
+    margin-top: 20px;
+     display: block; 
+     margin-left: auto;
+     margin-right: auto;
+     max-width: 25%;
+     max-height: 25%;
+}
+
+.SVCT { 
+    text-align: center; 
+    font-weight: 300;
+    padding: 1px;
+}
+
+.SVCFH {
+    text-align: center; 
+}
+
+.LR1 {
+    margin-top: 40px;
+     display: block; 
+     margin-left: auto;
+     margin-right: auto;
+     max-width: 75%;
+     max-height: 75%;
+     
+}
+
+.LRT { 
+    text-align: center;
+    padding: 20px; 
+    font-weight: 300;
+}
+
+.LRH { 
+    text-align: center; 
+}
+
+.Pre { 
+    max-width: 45%; 
+    max-height: 45%;
+    margin-left: 525px; 
+    padding: 20px; 
+}
+
+.pnh1 { 
+    color: rgb(37, 74, 167); 
+    text-align: center;
+    margin-top: 0px;
+}
+
+.pnh2{ 
+    text-align: center;
+    font-weight: 300;
+}
+
+.cnh1 { 
+    color: rgb(37, 74, 167); 
+    text-align: center;
+    margin-top: 75px;
+    padding: 2px;
+}
+
+.cnh2{ 
+    text-align: center;
+    padding: 2px; 
+    font-weight: 300;
+}
+
+.tnh1 { 
+    color: rgb(37, 74, 167); 
+    text-align: center;
+    margin-top: 0px;
+    padding: 2px;
+}
+
+.tnh2{ 
+    text-align: center;
+    padding: 20px; 
+    font-weight: 300;
+}
+
+.GBCP {
+    max-width: 45%; 
+    max-height: 45%;
+    margin-left: 400px; 
+    padding: 20px; 
+}
+
+.Pred { 
+    padding: 20px; 
+}
+
+.prnh1 { 
+    color: rgb(37, 74, 167); 
+    text-align: center;
+    margin-top: 0px;
+    padding: 2px;
+}
+
+.prnh2{ 
+    text-align: center;
+    padding: 20px; 
+    font-weight: 300;
+}
 
 
