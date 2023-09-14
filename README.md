@@ -2,7 +2,7 @@
 
 ## Description of the Project
 
-This projects uses a Supervised Machine Learning algorithm (Random Forest) to predict and identify sleep disorders such as sleep apnea and insomnia. It uses existing data and data analysis techniques to categorize sleep-related metrics.
+This project uses a Supervised Machine Learning algorithm (Random Forest) to predict and identify sleep disorders such as sleep apnea and insomnia. It uses existing data and data analysis techniques to categorize sleep-related metrics.
 
 ## Key Features of this Project
 
