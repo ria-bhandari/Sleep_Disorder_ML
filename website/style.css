@@ -260,6 +260,7 @@ header{
 
 .pnh2{ 
     text-align: center;
+    padding: 2px;
     font-weight: 300;
 }
 
@@ -311,6 +312,18 @@ header{
     text-align: center;
     padding: 20px; 
     font-weight: 300;
+}
+
+.enh1 { 
+    color: rgb(37, 74, 167); 
+    text-align: center;
+    margin-top: 100px;
+}
+
+.enh2{ 
+    text-align: center;
+    font-weight: 300;
+    padding: 10px; 
 }
 
 
